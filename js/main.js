@@ -1,7 +1,24 @@
-const robotron = document.getElementById('robotron')
+const subtrair = document.getElementById('subtrair');
+const braco = document.getElementById('braco');
+const somar = document.getElementById('somar');
 
-robotron.addEventListener('click', dizOi)
+const controle = document.querySelectorAll('.controle-ajuste');
 
-function dizOi () {
-   console.log("oi")
-}
+console.log(controle);
+
+somar.addEventListener('click', ()=> {
+  manipulaDados();
+})
+
+
+ subtrair.addEventListener('click', ()=> {
+   manipulaDados();
+ })
+
+ function manipulaDados (operacao) {
+   if (operacao === "subtrair") {
+      braco.value = parseInt(braco.value) +1;
+   } else {
+      braco.value = parseInt(braco.value) -1;
+   }
+ }
