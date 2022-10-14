@@ -1,3 +1,7 @@
+
+
+
+
 const controle = document.querySelectorAll('[data-controle]')
 const estatisticas = document.querySelectorAll('[data-estatisticas]')
 

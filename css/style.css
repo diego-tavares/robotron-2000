@@ -2,6 +2,9 @@
     --main-cinza: #CCCCCC;
     --main-branco: #FFFFFF;
     --main-preto: #000000;
+    --bg-azul: url(../img/fundo-azul.jpg);
+    --bg-verde: url(../img/fundo-verde.jpg);
+    
 }
 
 * {
@@ -9,7 +12,7 @@
 }
 
 body {
-    background: url(../img/fundo.jpg);
+    background: var(--bg-verde);
     background-position: center center;
     background-size: cover cover;
     padding: 0;
@@ -29,8 +32,31 @@ main {
     gap: 1vw;
 }
 
+.bg-azul {
+    background: var(--bg-azul)
+}
+
+.bg-verde {
+    background: var(--bg-verde)
+}
+
+.botao-azul {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: solid;
+    border-color: red;
+    position: absolute;
+    z-index: 2;
+    transition: transform 0.2s linear;
+}
+
+.botao-azul:hover {
+    transform: scale(1.5);
+    border-color: green;
+}
+
 .robotron {
-    background: url(../img/estrutura.png) no-repeat;
     background-position: center center;
     margin: 0;
     flex-basis: 40%;
