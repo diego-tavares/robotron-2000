@@ -1,4 +1,15 @@
+const botaoAzul = document.getElementById('botao-azul')
+const botaoVerde = document.getElementById('botao-verde')
 
+botaoAzul.addEventListener('click', () =>{
+  document.body.classList.remove('bg-verde')
+  document.body.classList.toggle('bg-azul')
+})
+
+botaoVerde.addEventListener('click', () =>{
+  document.body.classList.remove('bg-azul')
+  document.body.classList.toggle('bg-verde')
+})
 
 
 
