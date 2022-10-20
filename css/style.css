@@ -65,6 +65,7 @@ main {
 .botao-azul:hover {
     transform: scale(1.5);
     border-color: green;
+    cursor: pointer;
 }
 
 .botao-verde {
@@ -82,6 +83,7 @@ main {
 .botao-verde:hover {
     transform: scale(1.5);
     border-color: blue;
+    cursor: pointer;
 }
 
 .robotron {
