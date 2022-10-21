@@ -2,8 +2,8 @@
     --main-cinza: #CCCCCC;
     --main-branco: #FFFFFF;
     --main-preto: #000000;
-    --bg-azul: url(../img/fundo-azul.jpg);
-    --bg-verde: url(../img/fundo-verde.jpg);
+    --bg-1: url(../img/bg1.jpg);
+    --bg-2: url(../img/bg2.jpg);
     
 }
 
@@ -12,7 +12,7 @@
 }
 
 body {
-    background: var(--bg-verde);
+    background: var(--bg-1);
     background-position: center center;
     background-size: cover cover;
     padding: 0;
@@ -42,18 +42,18 @@ main {
     
 }
 
-.bg-azul {
-    background: var(--bg-azul)
+.bg-1 {
+    background: var(--bg-1)
 }
 
-.bg-verde {
-    background: var(--bg-verde);
+.bg-2 {
+    background: var(--bg-2);
 }
 
-.botao-azul {
+.botao {
     width: 80px;
     height: 80px;
-    background-image: var(--bg-azul);
+    background-image: var(--bg-2);
     background-size: cover;
     display: block;
     border-radius: 50%;
@@ -62,39 +62,30 @@ main {
 
 }
 
-.botao-azul:hover {
+.botao:hover {
     transform: scale(1.5);
-    border-color: green;
     cursor: pointer;
 }
 
-.botao-verde {
-    width: 80px;
-    height: 80px;
-    background-image: var(--bg-verde);
-    background-size: cover;
-    display: block;
-    border-radius: 50%;
-    z-index: 2;
-    transition: transform 0.2s linear;
-
-}
-
-.botao-verde:hover {
-    transform: scale(1.5);
-    border-color: blue;
-    cursor: pointer;
-}
 
 .robotron {
     background-position: center center;
     margin: 0;
     flex-basis: 40%;
     position: relative;
+    z-index: 1;
 }
 
 .robo-btn {
+    position: relative;
     width: 80px;
+    z-index: 2;
+}
+
+
+.robo-btn:hover {
+    transform: scale(1.5);
+    cursor: pointer;
 }
 
 .robo {
@@ -277,7 +268,7 @@ main {
     main {
         width: 90vw;
         height: 80vh;
-        margin: 5vh auto;
+        margin: 10vh auto;
     }
 }
 
