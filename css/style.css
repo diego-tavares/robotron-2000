@@ -50,6 +50,10 @@ main {
     background: var(--bg-2);
 }
 
+.robotron-button {
+    display: flex;
+    flex-direction: column;
+}
 .botao {
     width: 80px;
     height: 80px;
@@ -77,6 +81,7 @@ main {
 }
 
 .robo-btn {
+    margin-top: 10px;
     position: relative;
     width: 80px;
     z-index: 2;
