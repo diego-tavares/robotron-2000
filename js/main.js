@@ -12,6 +12,31 @@ botaoBg2.addEventListener('click', () =>{
 })
 
 
+const robotron = document.getElementById('robotron')
+const robotron1 = document.getElementById('robotron1')
+const robotron2 = document.getElementById('robotron2')
+const robotron3 = document.getElementById('robotron3')
+const robotron4 = document.getElementById('robotron4')
+const robotron5 = document.getElementById('robotron5')
+
+
+robotron1.addEventListener('click', ()=>{
+  robotron.setAttribute('src', 'img/robotron1.png')
+} )
+robotron2.addEventListener('click', ()=>{
+  robotron.setAttribute('src', 'img/robotron2.png')
+} )
+robotron3.addEventListener('click', ()=>{
+  robotron.setAttribute('src', 'img/robotron3.png')
+} )
+robotron4.addEventListener('click', ()=>{
+  robotron.setAttribute('src', 'img/robotron4.png')
+} )
+robotron5.addEventListener('click', ()=>{
+  robotron.setAttribute('src', 'img/robotron5.png')
+} )
+
+
 
 const controle = document.querySelectorAll('[data-controle]')
 const estatisticas = document.querySelectorAll('[data-estatisticas]')

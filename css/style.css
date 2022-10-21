@@ -4,6 +4,12 @@
     --main-preto: #000000;
     --bg-1: url(../img/bg1.jpg);
     --bg-2: url(../img/bg2.jpg);
+    --robotron-1: url(../img/robotron1.png);    
+    --robotron-2: url(../img/robotron2.png);
+    --robotron-3: url(../img/robotron3.png);
+    --robotron-4: url(../img/robotron4.png);
+    --robotron-5: url(../img/robotron5.png);
+
     
 }
 
@@ -34,11 +40,18 @@ main {
 
 .button-bg {
     width: 250px;
+    height: 100px;
     display: flex;
     justify-content: space-around;
     margin-top: -80px;
     left: 601px;
     z-index: 3;
+    
+}
+
+.robotron1 {
+    
+    background-image: var(--robotron-1);
     
 }
 
@@ -81,10 +94,12 @@ main {
 }
 
 .robo-btn {
-    margin-top: 10px;
+    margin-top: 20px;
     position: relative;
     width: 80px;
     z-index: 2;
+    top: 10%;
+    margin-left: -230%
 }
 
 
@@ -97,7 +112,7 @@ main {
     height: 110%;
     z-index: 1;
     position: absolute;
-    left: 10%;
+    left: -10%;
     top: -5%;
     
 }
