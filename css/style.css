@@ -93,6 +93,10 @@ main {
     position: relative;
 }
 
+.robo-btn {
+    width: 80px;
+}
+
 .robo {
     height: 110%;
     z-index: 1;
