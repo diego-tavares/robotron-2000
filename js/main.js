@@ -83,6 +83,9 @@ controle.forEach ( (elemento) => {
 
 function manipulaDados (operacao, controle) {
   const peca = controle.querySelector('[data-contador]')
+  
+braco.setAttribute('value', '00' )
+
 
   if (operacao ==='-') {
     peca.value = parseInt(peca.value) - 1
@@ -99,17 +102,26 @@ function atualizaEstatisticas(peca) {
 }
 
 
+const forca = document.getElementById('forca');
+const poder = document.getElementById('poder');
+const energia = document.getElementById('energia');
+const velocidade = document.getElementById('velocidade');
+
 const random = document.getElementById('producao');
 
-const braco = document.getElementById('braco');
+const controleContador = document.getElementsByClassName('controle-contador');
 
 random.addEventListener('click', ()=>{
-let bracos = 0;
-
-bracos = Math.floor(Math.random() * 10 + 1);
-
-braco.value = bracos;
 
 
+let randomizer = 0;
+
+randomizer = Math.floor(Math.random() * 999 + 1);
+forca.innerText = randomizer;
+randomizer = Math.floor(Math.random() * 999 + 1);
+poder.innerText = randomizer;
+randomizer = Math.floor(Math.random() * 999 + 1);
+energia.innerText = randomizer;
+randomizer = Math.floor(Math.random() * 999 + 1);
+velocidade.innerText = randomizer;
 })
-
