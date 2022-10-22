@@ -119,3 +119,5 @@ energia.innerText = randomizer;
 randomizer = Math.floor(Math.random() * 999 + 1);
 velocidade.innerText = randomizer;
 })
+
+
