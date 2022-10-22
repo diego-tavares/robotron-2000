@@ -82,7 +82,7 @@ controle.forEach ( (elemento) => {
 })
 
 function manipulaDados (operacao, controle) {
-  const peca = controle.querySelector('[data-contador')
+  const peca = controle.querySelector('[data-contador]')
 
   if (operacao ==='-') {
     peca.value = parseInt(peca.value) - 1
@@ -97,3 +97,19 @@ function atualizaEstatisticas(peca) {
     elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatisticas]
   })
 }
+
+
+const random = document.getElementById('producao');
+
+const braco = document.getElementById('braco');
+
+random.addEventListener('click', ()=>{
+let bracos = 0;
+
+bracos = Math.floor(Math.random() * 10 + 1);
+
+braco.value = bracos;
+
+
+})
+
