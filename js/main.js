@@ -84,9 +84,6 @@ controle.forEach ( (elemento) => {
 function manipulaDados (operacao, controle) {
   const peca = controle.querySelector('[data-contador]')
   
-braco.setAttribute('value', '00' )
-
-
   if (operacao ==='-') {
     peca.value = parseInt(peca.value) - 1
   } else {
@@ -109,10 +106,7 @@ const velocidade = document.getElementById('velocidade');
 
 const random = document.getElementById('producao');
 
-const controleContador = document.getElementsByClassName('controle-contador');
-
 random.addEventListener('click', ()=>{
-
 
 let randomizer = 0;
 
