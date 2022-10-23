@@ -7,8 +7,15 @@ botaoBg1.addEventListener('click', () =>{
 })
 
 botaoBg2.addEventListener('click', () =>{
-  document.body.classList.remove('bg-1')
-  document.body.classList.toggle('bg-2')
+  let contador = 1
+
+  if (contador === 1) {
+    document.body.classList.toggle('bg-2')
+    document.body.classList.remove('bg-1')
+    contador = 2
+    console.log(contador)
+  }
+  contador = contador +1
 })
 
 
@@ -98,6 +105,11 @@ function atualizaEstatisticas(peca) {
   })
 }
 
+const pecaBracos = document.getElementById('pecaBracos');
+const pecaBlindagem = document.getElementById('pecaBlindagem');
+const pecaNucleos = document.getElementById('pecaNucleos');
+const pecaPernas = document.getElementById('pecaPernas');
+const pecaFoguetes = document.getElementById('pecaFoguetes');
 
 const forca = document.getElementById('forca');
 const poder = document.getElementById('poder');
@@ -106,8 +118,10 @@ const velocidade = document.getElementById('velocidade');
 
 const random = document.getElementById('producao');
 
-random.addEventListener('click', ()=>{
+const allRandom = document.querySelectorAll('.controle-contador').textContent
 
+random.addEventListener('click', ()=>{
+let valueRandom = '??';
 let randomizer = 0;
 
 randomizer = Math.floor(Math.random() * 999 + 1);
@@ -118,6 +132,26 @@ randomizer = Math.floor(Math.random() * 999 + 1);
 energia.innerText = randomizer;
 randomizer = Math.floor(Math.random() * 999 + 1);
 velocidade.innerText = randomizer;
+
+pecaBracos.value = valueRandom;
+pecaBlindagem.value = valueRandom;
+pecaNucleos.value = valueRandom;
+pecaPernas.value = valueRandom;
+pecaFoguetes.value = valueRandom;
+
+console.log(pecaBracos.value)
+
 })
 
+function mudar() {
+  let allRandom = document.getElementsByClassName('.controle-contador');
+       for (let index = 0; index < allRandom.length; index++) {
+         allRandom[index].value = "blue";
+     }
+}
 
+const reset = document.getElementById('reset');
+
+reset.addEventListener('click', () => {
+  document.location.reload(true)
+})
