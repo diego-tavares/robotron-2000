@@ -17,15 +17,16 @@
 
 body {
     background: var(--bg-1);
-    background-position: center center;
     background-size: cover cover;
     padding: 0;
     margin: 0;
     font-weight: 300;
+    
 }
 
 body, input {
     font-family: 'Teko', sans-serif;
+    
 }
 
 main {
@@ -54,11 +55,13 @@ main {
 }
 
 .bg-1 {
-    background: var(--bg-1)
+    background: var(--bg-1);
+    transition: all 1s ease ;
 }
 
 .bg-2 {
     background: var(--bg-2);
+    transition: all 1s ease ;
 }
 
 .robotron-button {
@@ -102,6 +105,7 @@ main {
 
 
 .robo-btn:hover {
+    transition: transform 0.1s ease-in-out;
     transform: scale(1.5);
     cursor: pointer;
 }
@@ -191,31 +195,47 @@ main {
     border-radius: 50%;
     color: var(--main-cinza);
     font-size: 4em;
-    background: var(--main-preto);
+    color: var(--main-cinza);
     text-align: center;
     border: 3px solid var(--main-cinza);
     cursor: pointer;
+}
+.controle-ajuste:hover {
+    color: var(--main-preto);
+    background-color: var(--main-cinza);
+    border:3px solid var(--main-preto);
+    transition: all 0.2s ease ;
+    
 }
 
 .linha {
     border-color: var(--main-cinza);
 }
 
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
 .producao {
+    margin-left: 1em;
     margin-top: 1em;
     font-size: 2em;
     text-transform: uppercase;
     padding: 0.2em 1em;
+    border-radius: 10px;
     float: right;
     border: 3px solid var(--main-branco);
     background: var(--main-branco);
-    clip-path: polygon(100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 0);
     cursor: pointer;
+    transition: all 0.4s ease ;
 }
 
 .producao:hover {
     background: var(--main-preto);
-    color: var(--main-branco)
+    color: var(--main-branco);
+    transform: scale(1.1)
 }
 
 
