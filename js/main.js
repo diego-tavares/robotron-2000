@@ -115,19 +115,35 @@ if(pecaBracos.value === '??') {
 
 } else {
   
-  if (operacao ==='-') {
+  if(operacao == "-") {
     peca.value = parseInt(peca.value) - 1;
-  } else {
+} else if(operacao == "+") {
     peca.value = parseInt(peca.value) + 1;
+}
+}
+}
+/* 
+function atualizaEstatisticas(peca, operacao) {
+
+  if (operacao ==="+") {
+
+    estatisticas.forEach( (elemento) => {
+      elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatisticas]
+    })
   }
+ 
 }
-}
-
-function atualizaEstatisticas(peca) {
-
-  estatisticas.forEach( (elemento) => {
-    elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatisticas];
-  });
+ */
+function atualizaEstatisticas(peca, operacao) {
+  if(operacao == "+") {
+    estatisticas.forEach( (elemento) => {
+      elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatisticas];
+    })
+  } else if (operacao == '-') {
+    estatisticas.forEach( (elemento) => {
+      elemento.textContent = parseInt(elemento.textContent) - pecas[peca][elemento.dataset.estatisticas];
+    })
+  }
 }
 
 const pecaBracos = document.getElementById('pecaBracos');
