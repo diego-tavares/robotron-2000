@@ -13,8 +13,6 @@ botaoBg2.addEventListener('click', () =>{
 })
 
 
-
-
 const robotron = document.getElementById('robotron');
 const robotron1 = document.getElementById('robotron1');
 const robotron2 = document.getElementById('robotron2');
@@ -101,18 +99,10 @@ function manipulaDados (operacao, controle) {
 
   const peca = controle.querySelector('[data-contador]');
 
-  let zero = 0
+  
   
 if(pecaBracos.value === '??') {
-  pecaBracos.value = 0;
-  pecaBlindagem.value = 0;
-  pecaNucleos.value = 0;
-  pecaPernas.value = 0;
-  pecaFoguetes.value = 0;
-  forca.innerText = zero;
-  poder.innerText = zero;
-  energia.innerText = zero;
-  velocidade.innerText = zero;
+zerarDados()
 
 } else {
   
@@ -125,6 +115,7 @@ if(pecaBracos.value === '??') {
 }
 
 function atualizaEstatisticas(peca, operacao) {
+ 
   if (operacao ==='+') {
     estatisticas.forEach( (elemento) => {
       elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatisticas];
@@ -137,6 +128,18 @@ function atualizaEstatisticas(peca, operacao) {
 
 }
 
+function zerarDados() {
+  let zero = 0
+  pecaBracos.value = 0;
+  pecaBlindagem.value = 0;
+  pecaNucleos.value = 0;
+  pecaPernas.value = 0;
+  pecaFoguetes.value = 0;
+  forca.innerText = zero;
+  poder.innerText = zero;
+  energia.innerText = zero;
+  velocidade.innerText = zero;
+}
 
 
 const pecaBracos = document.getElementById('pecaBracos');
