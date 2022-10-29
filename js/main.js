@@ -1,3 +1,5 @@
+/* Troca de papel de parede */
+
 const botaoBg1 = document.getElementById('botao-1');
 const botaoBg2 = document.getElementById('botao-2');
 
@@ -12,6 +14,7 @@ botaoBg2.addEventListener('click', () =>{
 
 })
 
+/* Troca de robô */
 
 const robotron = document.getElementById('robotron');
 const robotron1 = document.getElementById('robotron1');
@@ -42,6 +45,7 @@ robotron5.addEventListener('click', ()=>{
 } );
 
 
+/* Controlador e manipulação de dados */
 
 const controle = document.querySelectorAll('[data-controle]');
 
@@ -141,6 +145,7 @@ function zerarDados() {
   velocidade.innerText = zero;
 }
 
+/* Botão randomizer */
 
 const pecaBracos = document.getElementById('pecaBracos');
 const pecaBlindagem = document.getElementById('pecaBlindagem');
@@ -176,6 +181,8 @@ pecaPernas.value = valueRandom;
 pecaFoguetes.value = valueRandom;
 
 })
+
+/* Botão reset */
 
 const reset = document.getElementById('reset');
 
